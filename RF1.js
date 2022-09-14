@@ -49,7 +49,7 @@ fastify.get('/', async (request, reply) => {
 
 // Run the server!
 const host = process.env.NODE_ENV === 'production' ? '0.0.0.0' : '127.1'
-const port = process.env.SPORT || process.env.PORT || 4000;
+const port = process.env.$PORT || process.env.PORT || 4000;
 const start = async () => {
   try {
     await fastify.listen({
